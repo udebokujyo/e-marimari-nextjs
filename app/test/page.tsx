@@ -8,7 +8,8 @@ const App = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const handleFormSubmit = (e) => {
+  // TypeScript用に型注釈 (: React.FormEvent) を追加しました
+  const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('submitting');
     
@@ -81,7 +82,7 @@ const App = () => {
             Create Your <br className="md:hidden"/>"Kawaii" Future!
           </h1>
           <p className="text-lg md:text-2xl font-bold mb-10 opacity-90 max-w-2xl mx-auto leading-relaxed">
-            e-marimariのテストです。<br/>
+            e-marimariは、あなたのビジネスと日常に<br/>
             ビビッドな彩りを加えるパートナーです。
           </p>
           <a 

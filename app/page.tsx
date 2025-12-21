@@ -8,7 +8,8 @@ const App = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const handleFormSubmit = (e) => {
+  // TypeScript用に型注釈 (: React.FormEvent) を追加しました
+  const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('submitting');
     
