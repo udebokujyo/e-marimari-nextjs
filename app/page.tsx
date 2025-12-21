@@ -163,7 +163,7 @@ const App = () => {
               <div>
                 <label className="block font-bold text-[#ff2e63] mb-2">お問い合わせ内容</label>
                 <textarea 
-                  rows=5 
+                  rows="5" 
                   placeholder="ご自由にご記入ください" 
                   required
                   className="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#08d9d6] focus:bg-[#f0ffff] transition"
