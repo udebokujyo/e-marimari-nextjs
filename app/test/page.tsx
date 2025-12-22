@@ -8,7 +8,7 @@ const App = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // TypeScript用に型注釈 (: React.FormEvent) を追加しました
+  // TypeScript用に型注釈 (: React.FormEvent) を追加
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('submitting');
@@ -34,7 +34,8 @@ const App = () => {
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 text-2xl md:text-3xl font-extrabold text-[#ff2e63] tracking-wider hover:opacity-80 transition">
-            <Heart className="fill-current" size={28} />
+            {/* size={28} -> w-7 h-7 (28px) */}
+            <Heart className="fill-current w-7 h-7" />
             <span>e-marimari</span>
           </a>
 
@@ -44,14 +45,16 @@ const App = () => {
             <a href="#blog" className="hover:text-[#ff2e63] transition">BLOG</a>
             <a href="#contact" className="hover:text-[#ff2e63] transition">CONTACT</a>
             <div className="flex gap-4 ml-4 border-l-2 border-gray-200 pl-4">
-              <a href="#" className="hover:text-[#08d9d6] hover:scale-110 transition duration-300"><Instagram size={24} /></a>
-              <a href="#" className="hover:text-[#08d9d6] hover:scale-110 transition duration-300"><Twitter size={24} /></a>
+              {/* size={24} -> w-6 h-6 (24px) */}
+              <a href="#" className="hover:text-[#08d9d6] hover:scale-110 transition duration-300"><Instagram className="w-6 h-6" /></a>
+              <a href="#" className="hover:text-[#08d9d6] hover:scale-110 transition duration-300"><Twitter className="w-6 h-6" /></a>
             </div>
           </nav>
 
           {/* Mobile Menu Button */}
           <button className="md:hidden text-[#ff2e63]" onClick={toggleMenu}>
-            {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
+            {/* size={32} -> w-8 h-8 (32px) */}
+            {isMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
           </button>
         </div>
 
@@ -63,8 +66,8 @@ const App = () => {
               <a href="#blog" onClick={toggleMenu} className="py-2 hover:bg-gray-50 rounded text-[#ff2e63]">BLOG</a>
               <a href="#contact" onClick={toggleMenu} className="py-2 hover:bg-gray-50 rounded text-[#ff2e63]">CONTACT</a>
               <div className="flex justify-center gap-6 pt-2">
-                <a href="#"><Instagram className="text-gray-500" /></a>
-                <a href="#"><Twitter className="text-gray-500" /></a>
+                <a href="#"><Instagram className="text-gray-500 w-6 h-6" /></a>
+                <a href="#"><Twitter className="text-gray-500 w-6 h-6" /></a>
               </div>
             </nav>
           </div>
@@ -90,7 +93,8 @@ const App = () => {
             className="inline-flex items-center gap-2 bg-white text-[#ff2e63] px-10 py-4 rounded-full font-extrabold text-lg shadow-[0_4px_0_#08d9d6] hover:translate-y-1 hover:shadow-none transition-all active:translate-y-1 active:shadow-none"
           >
             お問い合わせはこちら
-            <ArrowRight size={20} strokeWidth={3} />
+            {/* size={20} -> w-5 h-5 (20px) */}
+            <ArrowRight className="w-5 h-5" strokeWidth={3} />
           </a>
         </div>
       </section>
@@ -163,7 +167,8 @@ const App = () => {
               <div>
                 <label className="block font-bold text-[#ff2e63] mb-2">お問い合わせ内容</label>
                 <textarea 
-                  rows="5" 
+                  // 修正箇所: rows="5" -> rows={5} (TypeScriptでは数値型が必要)
+                  rows={5}
                   placeholder="ご自由にご記入ください" 
                   required
                   className="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#08d9d6] focus:bg-[#f0ffff] transition"
@@ -185,9 +190,10 @@ const App = () => {
       <footer className="bg-[#252a34] text-white py-12 text-center">
         <div className="container mx-auto px-4">
           <div className="flex justify-center gap-8 mb-8">
-            <a href="#" className="hover:text-[#08d9d6] hover:scale-125 transition duration-300"><Instagram size={28} /></a>
-            <a href="#" className="hover:text-[#08d9d6] hover:scale-125 transition duration-300"><Twitter size={28} /></a>
-            <a href="#" className="hover:text-[#08d9d6] hover:scale-125 transition duration-300"><Facebook size={28} /></a>
+            {/* Footer icons: size={28} -> w-7 h-7 (28px) */}
+            <a href="#" className="hover:text-[#08d9d6] hover:scale-125 transition duration-300"><Instagram className="w-7 h-7" /></a>
+            <a href="#" className="hover:text-[#08d9d6] hover:scale-125 transition duration-300"><Twitter className="w-7 h-7" /></a>
+            <a href="#" className="hover:text-[#08d9d6] hover:scale-125 transition duration-300"><Facebook className="w-7 h-7" /></a>
           </div>
           <p className="font-bold opacity-80">&copy; 2025 e-marimari Inc. All Rights Reserved.</p>
         </div>
