@@ -86,7 +86,7 @@ const App = () => {
           </h1>
           <p className="text-lg md:text-2xl font-bold mb-10 opacity-90 max-w-2xl mx-auto leading-relaxed">
             e-marimariは、あなたのビジネスと日常に<br/>
-            ビビッドな彩りを加えるパートナーデス。
+            ビビッドな彩りを加えるパートナーです。
           </p>
           <a 
             href="#contact" 
