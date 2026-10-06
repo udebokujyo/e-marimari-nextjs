@@ -75,13 +75,14 @@ const App = () => {
       </header>
 
       {/* --- Hero Section --- */}
-      <section className="bg-[#ff2e63] text-white pt-20 pb-24 text-center rounded-b-[40px] md:rounded-b-[60px] shadow-lg relative overflow-hidden">
+      <section className="bg-gradient-to-r from-[#ff2e63] via-[#ff7eb3] to-[#08d9d6] text-white pt-20 pb-24 text-center rounded-b-[40px] md:rounded-b-[60px] shadow-lg relative overflow-hidden">
         {/* 装飾用サークル */}
-        <div className="absolute top-[-50px] left-[-50px] w-40 h-40 bg-white opacity-10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-10 right-10 w-20 h-20 bg-[#08d9d6] opacity-30 rounded-full blur-xl"></div>
+        <div className="absolute top-[-50px] left-[-50px] w-40 h-40 bg-white opacity-20 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-20 h-20 bg-yellow-300 opacity-50 rounded-full blur-xl animate-bounce"></div>
+        <div className="absolute top-10 right-20 w-32 h-32 bg-purple-400 opacity-40 rounded-full blur-xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-md">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-md text-transparent bg-clip-text bg-gradient-to-r from-white to-yellow-200">
             Create Your <br className="md:hidden"/>"Kawaii" Future!
           </h1>
           <p className="text-lg md:text-2xl font-bold mb-10 opacity-90 max-w-2xl mx-auto leading-relaxed">
@@ -90,7 +91,7 @@ const App = () => {
           </p>
           <a 
             href="#contact" 
-            className="inline-flex items-center gap-2 bg-white text-[#ff2e63] px-10 py-4 rounded-full font-extrabold text-lg shadow-[0_4px_0_#08d9d6] hover:translate-y-1 hover:shadow-none transition-all active:translate-y-1 active:shadow-none"
+            className="inline-flex items-center gap-2 bg-white text-[#ff2e63] px-10 py-4 rounded-full font-extrabold text-lg shadow-[0_4px_0_#ff7eb3] hover:translate-y-1 hover:shadow-none transition-all active:translate-y-1 active:shadow-none"
           >
             お問い合わせはこちら
             {/* size={20} -> w-5 h-5 (20px) */}
@@ -113,21 +114,21 @@ const App = () => {
             {/* Blog Item 1 */}
             <article className="bg-white border-2 border-[#08d9d6] rounded-2xl p-6 shadow-[5px_5px_0_#08d9d6] hover:shadow-[8px_8px_0_#ff2e63] hover:border-[#ff2e63] hover:-translate-y-1 transition-all cursor-pointer group">
               <div className="text-sm font-bold text-gray-400 mb-2">2025.12.18</div>
-              <h3 className="text-xl font-bold text-[#ff2e63] mb-3 group-hover:underline">ウェブサイトをリニューアルしました！</h3>
+              <h3 className="text-xl font-bold text-[#08d9d6] mb-3 group-hover:text-[#ff2e63] group-hover:underline">ウェブサイトをリニューアルしました！</h3>
               <p className="text-sm leading-relaxed text-gray-600">e-marimariの公式サイトが新しくなりました。よりかわいく、使いやすく進化しています。</p>
             </article>
 
             {/* Blog Item 2 */}
-            <article className="bg-white border-2 border-[#08d9d6] rounded-2xl p-6 shadow-[5px_5px_0_#08d9d6] hover:shadow-[8px_8px_0_#ff2e63] hover:border-[#ff2e63] hover:-translate-y-1 transition-all cursor-pointer group">
+            <article className="bg-white border-2 border-[#ffb703] rounded-2xl p-6 shadow-[5px_5px_0_#ffb703] hover:shadow-[8px_8px_0_#ff2e63] hover:border-[#ff2e63] hover:-translate-y-1 transition-all cursor-pointer group">
               <div className="text-sm font-bold text-gray-400 mb-2">2025.12.15</div>
-              <h3 className="text-xl font-bold text-[#ff2e63] mb-3 group-hover:underline">新しいプロジェクトが始動します</h3>
+              <h3 className="text-xl font-bold text-[#ffb703] mb-3 group-hover:text-[#ff2e63] group-hover:underline">新しいプロジェクトが始動します</h3>
               <p className="text-sm leading-relaxed text-gray-600">来春に向けて、ワクワクするような新サービスの準備を進めています。お楽しみに！</p>
             </article>
 
             {/* Blog Item 3 */}
-            <article className="bg-white border-2 border-[#08d9d6] rounded-2xl p-6 shadow-[5px_5px_0_#08d9d6] hover:shadow-[8px_8px_0_#ff2e63] hover:border-[#ff2e63] hover:-translate-y-1 transition-all cursor-pointer group">
+            <article className="bg-white border-2 border-[#8338ec] rounded-2xl p-6 shadow-[5px_5px_0_#8338ec] hover:shadow-[8px_8px_0_#ff2e63] hover:border-[#ff2e63] hover:-translate-y-1 transition-all cursor-pointer group">
               <div className="text-sm font-bold text-gray-400 mb-2">2025.12.10</div>
-              <h3 className="text-xl font-bold text-[#ff2e63] mb-3 group-hover:underline">オフィスにかわいい観葉植物が届きました</h3>
+              <h3 className="text-xl font-bold text-[#8338ec] mb-3 group-hover:text-[#ff2e63] group-hover:underline">オフィスにかわいい観葉植物が届きました</h3>
               <p className="text-sm leading-relaxed text-gray-600">オフィスの雰囲気が一気に明るくなりました。緑があると仕事も捗りますね。</p>
             </article>
           </div>
@@ -135,12 +136,12 @@ const App = () => {
       </section>
 
       {/* --- Contact Section --- */}
-      <section id="contact" className="py-20 px-4 bg-[#fff0f5] mb-12 rounded-[40px] mx-4 md:mx-auto max-w-6xl">
+      <section id="contact" className="py-20 px-4 bg-gradient-to-br from-[#fff0f5] via-[#e0ffff] to-[#f0e6ff] mb-12 rounded-[40px] mx-4 md:mx-auto max-w-6xl shadow-xl">
         <div className="container mx-auto max-w-3xl">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#ff2e63] inline-block relative">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#ff2e63] inline-block relative drop-shadow-sm">
               Contact Us
-              <span className="block w-full h-2 bg-[#08d9d6] mt-2 rounded-full opacity-60"></span>
+              <span className="block w-full h-2 bg-gradient-to-r from-[#ff2e63] to-[#08d9d6] mt-2 rounded-full opacity-60"></span>
             </h2>
           </div>
 
@@ -177,7 +178,7 @@ const App = () => {
               <button 
                 type="submit" 
                 disabled={formStatus === 'submitting'}
-                className="w-full bg-[#ff2e63] text-white font-bold text-xl py-4 rounded-full shadow-[0_4px_0_#c70039] hover:opacity-90 active:shadow-none active:translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-[#ff2e63] to-[#ff7eb3] text-white font-bold text-xl py-4 rounded-full shadow-[0_4px_0_#c70039] hover:opacity-90 active:shadow-none active:translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {formStatus === 'submitting' ? '送信中...' : '送信する'}
               </button>
